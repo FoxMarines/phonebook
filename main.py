@@ -15,19 +15,19 @@ def add_phone(f_name, l_name,phone: str):
     print(result)
     phones.append(result)
 
-if __name__ == "__main__":
-    result = search_phone("Ol")
-    print(result)
-    result = search_phone("oleh")
-    print(result)
-    add_phone("Vova", "Fox", "0928321212")
-print(phones)
-
 def delete_phone(name: str):
     for phone in phones:
      if phone["f_name"] or ["l_name"] or ["phone"] == name:
       phones.remove(phone)
 
 delete_phone("Oleh")
+print(phones)
+
+if __name__ == "__main__":
+    result = search_phone("Ol")
+    print(result)
+    result = search_phone("oleh")
+    print(result)
+    add_phone("Vova", "Fox", "0928321212")
 print(phones)
 
