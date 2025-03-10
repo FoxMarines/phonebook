@@ -1,6 +1,6 @@
 #ТЕЛЕФОННАЯ СУКА КНИГА ЕБИ ЕЕ МАТЬ БЛЯТЬ!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-phones = [{"f_name": "Oleh", "l_name": "Usov", "phone": "736340103"}, {"f_name": "Вова", "l_name": "Свиня", "phone": "103"}]
+phones = [{"f_name": "Oleh", "l_name": "Usov", "phone": "736340103"}, {"f_name": "Вова", "l_name": "Бог", "phone": "103"}]
 
 def search_phone(search_dict: str):
    result = []
