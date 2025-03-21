@@ -1,33 +1,29 @@
-#ТЕЛЕФОННАЯ СУКА КНИГА ЕБИ ЕЕ МАТЬ БЛЯТЬ!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# ТЕЛЕФОННАЯ СУКА КНИГА ЕБИ ЕЕ МАТЬ БЛЯТЬ!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-phones = [{"f_name": "Oleh", "l_name": "Usov", "phone": "736340103"}, {"f_name": "Вова", "l_name": "Бог", "phone": "103"}]
+phones = []
 
-def search_phone(search_dict: str):
-   result = []
 
-   for phone in phones:
-            if search_dict in phone:
-             result.append(phone)
-   return result
+def search_phone(search_contact: str):
+    result = []
+    for phone in phones:  # phone = dict
+        for key, value in phone.items():  # key = f_name, l_name, phone; value = vova, gospod, 1488 etc
+            if str(search_contact) in value:
+                result.append(phone)
+    return result
 
-def add_phone(f_name, l_name,phone: str):
+
+def add_phone(f_name: str, l_name: str, phone: str):
     result = {"f_name": f_name, "l_name": l_name, "phone": phone}
-    print(result)
     phones.append(result)
 
-def delete_phone(name: str):
-    for phone in phones:
-     if phone["f_name"] or ["l_name"] or ["phone"] == name:
-      phones.remove(phone)
 
-delete_phone("Oleh")
-print(phones)
+def delete_phone(f_name: str, l_name: str, phone: str):
+    for p in phones[:]:
+        if p["f_name"] == f_name and p["l_name"] == l_name and p["phone"] == phone:
+            phones.remove(p)
 
-if __name__ == "__main__":
-    result = search_phone("Ol")
-    print(result)
-    result = search_phone("oleh")
-    print(result)
-    add_phone("Vova", "Fox", "0928321212")
-print(phones)
 
+add_phone("Vova", "Gospod", "1488")
+add_phone("Oleh", "usov", "1337")
+
+b = search_phone("")
